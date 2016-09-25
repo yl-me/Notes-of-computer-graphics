@@ -4,7 +4,7 @@ Visual Studio 2015
 
 ##First, include the required header files.  
 
-GLUT、glew、glext、glxext、glcorearb、wglext、glaux、
+GLUT、glew、glext、glxext、glcorearb、wglext、glaux.
   
 ##Lesson 1.Setting Up An OpenGL Window  
 
