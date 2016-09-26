@@ -6,6 +6,10 @@ Visual Studio 2015
 
 GLUT、glew、glext、glxext、glcorearb、wglext、glaux.
 
+##Lesson2.First Polygon  
+
+![image](https://github.com/yl-me/NeHe-Productions/blob/master/Lesson2.First%20Polygon/Screenshot.png)  
+
 ##Lesson 1.Setting Up An OpenGL Window  
 
 ![image](https://github.com/yl-me/NeHe-Production/blob/master/Lesson1.Setting%20Up%20An%20OpenGL%20Window/Screenshot.png)  
