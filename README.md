@@ -6,6 +6,10 @@ Visual Studio 2015
 
 GLUT、glew、glext、glxext、glcorearb、wglext、glaux.
 
+##Lesson3.Adding Color  
+
+![image](https://github.com/yl-me/NeHe-Productions/blob/master/Lesson3.Adding%20Color/Screenshot.png)  
+
 ##Lesson2.First Polygon  
 
 ![image](https://github.com/yl-me/NeHe-Productions/blob/master/Lesson2.First%20Polygon/Screenshot.png)  
