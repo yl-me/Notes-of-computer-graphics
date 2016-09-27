@@ -576,5 +576,3 @@ int WINAPI WinMain(HINSTANCE hInstance,                   // Instance
 //******************************************************************************************************************************************/
     return (msg.wParam);                                  // Exit the program
 }
-
-Main.cpp
