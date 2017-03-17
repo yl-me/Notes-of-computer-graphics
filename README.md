@@ -1,8 +1,8 @@
-##Test environment  
+## Test environment  
 
 Visual Studio 2015  
 
-##First, include the required header files.  
+## First, include the required header files.  
 
 GLUT、glew、glext、glxext、glcorearb、wglext、glaux.
 
