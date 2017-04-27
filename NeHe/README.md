@@ -7,3 +7,5 @@ Visual Studio 2015
 GLUT、glew、glext、glxext、glcorearb、wglext、glaux.
 
 before to opengl 3.2
+
+NeHe [nehe.gamedev.net](nehe.gamedev.net)
