@@ -8,4 +8,4 @@ GLUT、glew、glext、glxext、glcorearb、wglext、glaux.
 
 before to opengl 3.2
 
-NeHe [nehe.gamedev.net](nehe.gamedev.net)
+NeHe [nehe.gamedev.net](http://nehe.gamedev.net)
