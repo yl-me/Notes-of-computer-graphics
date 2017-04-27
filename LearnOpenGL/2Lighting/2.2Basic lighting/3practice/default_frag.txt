@@ -1,0 +1,12 @@
+#version 330 core
+
+in vec3 LightColor; 
+
+out vec4 color;
+
+uniform vec3 objectColor;
+
+void main()
+{
+   color = vec4(LightColor * objectColor, 1.0f);
+}
