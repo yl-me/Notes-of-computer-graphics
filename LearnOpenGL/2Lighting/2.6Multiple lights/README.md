@@ -1,1 +1,1 @@
-![image](https://github.com/yl-me/LearnOpenGL/blob/master/2%E5%85%89%E7%85%A7/2.6%E5%A4%9A%E5%85%89%E6%BA%90/Multiple%20lights.png)
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/LearnOpenGL/2Lighting/2.6Multiple%20lights/Multiple%20lights.png)

@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/LearnOpenGL/2Lighting/2.5Light%20casters/2Point%20Light/Point%20Light.png)
