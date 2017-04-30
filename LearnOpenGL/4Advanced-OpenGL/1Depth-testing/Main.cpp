@@ -72,7 +72,7 @@ int main()
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
 
-	Shader ourShader("C://Users/lenovo/Desktop/NeHe/NeHe/default.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/default.frag");
+	Shader ourShader("path/default.vert", "path/default.frag");
 
 	GLfloat cubeVertices[] = {
 		// Positions     // Texture Coords
@@ -158,8 +158,8 @@ int main()
 	glBindVertexArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	GLuint cubeTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/wall.jpg");
-	GLuint planeTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/metal.png");
+	GLuint cubeTexture = loadTexture("path/wall.jpg");
+	GLuint planeTexture = loadTexture("path/metal.png");
 
 	while (!glfwWindowShouldClose(window)) {   // 检查GLFW是否被要求退出
 		glfwPollEvents();                      // 检查是否触发事件，来调用回调函数

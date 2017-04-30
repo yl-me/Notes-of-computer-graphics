@@ -75,8 +75,8 @@ int main()
 	glStencilFunc(GL_LEQUAL, 1, 0xFF);  // do something
 	glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);// how to update the stencil buffer(sfail, dpfail, dppass)
 
-	Shader ourShader("C://Users/lenovo/Desktop/NeHe/NeHe/default.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/default.frag");
-	Shader shaderSingleColor("C://Users/lenovo/Desktop/NeHe/NeHe/default.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/outline.frag");
+	Shader ourShader("path/default.vert", "path/default.frag");
+	Shader shaderSingleColor("path/default.vert", "path/outline.frag");
 
 	GLfloat cubeVertices[] = {
 		// Positions     // Texture Coords
@@ -162,8 +162,8 @@ int main()
 	glBindVertexArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	GLuint cubeTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/wall.jpg");
-	GLuint planeTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/metal.png");
+	GLuint cubeTexture = loadTexture("path/wall.jpg");
+	GLuint planeTexture = loadTexture("path/metal.png");
 
 	while (!glfwWindowShouldClose(window)) {   // 检查GLFW是否被要求退出
 		glfwPollEvents();                      // 检查是否触发事件，来调用回调函数
