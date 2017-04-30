@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson38.Loading%20Textures%20From%20A%20Resource%20File%20%26%20Texturing%20Triangles/Screenshot.png)

@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson35.Playing%20AVI%20Files%20In%20OpenGL/Screenshot.png)

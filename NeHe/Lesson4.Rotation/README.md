@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson4.Rotation/Screenshot.png)

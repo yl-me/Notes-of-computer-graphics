@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson34.Beautiful%20Landscapes%20By%20Means%20Of%20Height%20Mapping/Screenshot.png)

@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson26.Clipping%20%26%20Reflections%20Using%20The%20Stencil%20Buffer/Screenshot.png)

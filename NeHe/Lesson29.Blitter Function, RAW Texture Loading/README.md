@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson29.Blitter%20Function%2C%20RAW%20Texture%20Loading/Screenshot.png)

@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson1.Setting%20Up%20An%20OpenGL%20Window/Screenshot.png)

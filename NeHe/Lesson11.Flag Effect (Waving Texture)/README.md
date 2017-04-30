@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson11.Flag%20Effect%20(Waving%20Texture)/Screenshot.gif)

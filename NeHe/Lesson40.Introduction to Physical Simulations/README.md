@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson40.Introduction%20to%20Physical%20Simulations/Screenshot.png)

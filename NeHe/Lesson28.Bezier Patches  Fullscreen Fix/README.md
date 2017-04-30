@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson28.Bezier%20Patches%20%20Fullscreen%20Fix/Screenshot.png)

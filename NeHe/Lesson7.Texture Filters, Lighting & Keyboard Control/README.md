@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson7.Texture%20Filters%2C%20Lighting%20%26%20Keyboard%20Control/Screenshot.gif)

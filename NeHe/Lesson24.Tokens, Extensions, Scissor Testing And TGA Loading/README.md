@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson24.Tokens%2C%20Extensions%2C%20Scissor%20Testing%20And%20TGA%20Loading/Screenshot.png)

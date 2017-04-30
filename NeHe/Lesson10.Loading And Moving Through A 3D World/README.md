@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson10.Loading%20And%20Moving%20Through%20A%203D%20World/Screenshot.png)

@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson41.Volumetric%20Fog%20%26%20IPicture%20Image%20Loading/Screenshot.png)

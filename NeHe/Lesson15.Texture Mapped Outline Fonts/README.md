@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson15.Texture%20Mapped%20Outline%20Fonts/Screenshot.gif)

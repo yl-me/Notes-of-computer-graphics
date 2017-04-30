@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson32.Picking%2C%20Alpha%20Blending%2C%20Alpha%20Testing%2C%20Sorting/Screenshot.png)

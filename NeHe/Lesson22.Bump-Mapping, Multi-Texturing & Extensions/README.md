@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson22.Bump-Mapping%2C%20Multi-Texturing%20%26%20Extensions/Screenshot.png)

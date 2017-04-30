@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson21.Lines%2C%20Antialiasing%2C%20Timing%2C%20Ortho%20View%20And%20Simple%20Sounds/Screenshot.png)

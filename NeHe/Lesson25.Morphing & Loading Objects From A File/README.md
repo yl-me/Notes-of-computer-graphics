@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson25.Morphing%20%26%20Loading%20Objects%20From%20A%20File/Screenshot.png)

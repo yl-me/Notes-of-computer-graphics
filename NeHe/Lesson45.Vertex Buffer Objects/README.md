@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson45.Vertex%20Buffer%20Objects/Screenshot.png)

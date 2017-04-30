@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson33.Loading%20Compressed%20And%20Uncompressed%20TGA's/Screenshot.png)

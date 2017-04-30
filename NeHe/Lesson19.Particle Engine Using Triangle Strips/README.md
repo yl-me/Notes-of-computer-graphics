@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson19.Particle%20Engine%20Using%20Triangle%20Strips/Screenshot.png)

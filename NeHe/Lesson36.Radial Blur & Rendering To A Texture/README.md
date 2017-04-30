@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson36.Radial%20Blur%20%26%20Rendering%20To%20A%20Texture/Screenshot.gif)
