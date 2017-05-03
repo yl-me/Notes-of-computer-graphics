@@ -202,7 +202,7 @@ int main()
 	GLuint cubemapTexture = loadCubemapTexture(texture_face);
 
 	glEnable(GL_DEPTH_TEST);          //深度测试
-	glDepthFunc(GL_LESS);
+	glDepthFunc(GL_LEQUAL);
 
 	while (!glfwWindowShouldClose(window)) {   // 检查GLFW是否被要求退出
 		glfwPollEvents();                      // 检查是否触发事件，来调用回调函数
