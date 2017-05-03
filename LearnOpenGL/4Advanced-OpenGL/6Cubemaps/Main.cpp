@@ -71,8 +71,8 @@ int main()
 
 	glViewport(0, 0, WIDTH, HEIGHT);
 
-	Shader ourShader("C://Users/lenovo/Desktop/NeHe/NeHe/default.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/default.frag");
-	Shader skyboxShader("C://Users/lenovo/Desktop/NeHe/NeHe/cubemap.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/cubemap.frag");
+	Shader ourShader("path/default.vert", "path/default.frag");
+	Shader skyboxShader("path/cubemap.vert", "path/cubemap.frag");
 
 	GLfloat skyboxVertices[] = {
 		// Positions          
@@ -191,18 +191,18 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, 0);  // 可以安全解绑，对于glVertexAttribPointer绑定的VBO对象
 	glBindVertexArray(0);  // 解绑VAO
 
-	GLuint cubeTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/container.jpg");
+	GLuint cubeTexture = loadTexture("path/container.jpg");
 	std::vector<const char *> texture_face;
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/right.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/left.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/top.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/bottom.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/back.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/front.jpg");
+	texture_face.push_back("path/skybox/right.jpg");
+	texture_face.push_back("path/skybox/left.jpg");
+	texture_face.push_back("path/skybox/top.jpg");
+	texture_face.push_back("path/skybox/bottom.jpg");
+	texture_face.push_back("path/skybox/back.jpg");
+	texture_face.push_back("path/skybox/front.jpg");
 	GLuint cubemapTexture = loadCubemapTexture(texture_face);
 
 	glEnable(GL_DEPTH_TEST);          //深度测试
-	glDepthFunc(GL_LEQUAL);
+	glDepthFunc(GL_LESS);
 
 	while (!glfwWindowShouldClose(window)) {   // 检查GLFW是否被要求退出
 		glfwPollEvents();                      // 检查是否触发事件，来调用回调函数
@@ -216,32 +216,16 @@ int main()
 
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		
-		// skybox
-		glDepthMask(GL_FALSE);
-		skyboxShader.Use();
-		glm::mat4 view = glm::mat4(glm::mat3(camera.GetViewMatrix()));
-		glm::mat4 projection = glm::perspective(camera.Zoom, (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
-		GLuint viewLoc = glGetUniformLocation(ourShader.Program, "view");
-		GLuint projectionLoc = glGetUniformLocation(ourShader.Program, "projection");
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		glBindVertexArray(skyboxVAO);
-		GLuint skyboxLoc = glGetUniformLocation(ourShader.Program, "skybox");
-		glUniform1i(skyboxLoc, 0);
-		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
-		glBindVertexArray(0);
-		glDepthMask(GL_TRUE);
 
 		// drawscen
 		ourShader.Use();
 		glm::mat4 model;
-		view = camera.GetViewMatrix();
+		glm::mat4 view = camera.GetViewMatrix();
+		glm::mat4 projection = glm::perspective(camera.Zoom, (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
 		GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
-		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(model));
-		viewLoc = glGetUniformLocation(ourShader.Program, "view");
-		projectionLoc = glGetUniformLocation(ourShader.Program, "projection");
+		GLuint viewLoc = glGetUniformLocation(ourShader.Program, "view");
+		GLuint projectionLoc = glGetUniformLocation(ourShader.Program, "projection");
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
@@ -257,6 +241,23 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		glBindVertexArray(0);
+
+		// skybox
+		glDepthFunc(GL_LEQUAL);
+		skyboxShader.Use();
+		view = glm::mat4(glm::mat3(camera.GetViewMatrix()));
+		projection = glm::perspective(camera.Zoom, (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
+		viewLoc = glGetUniformLocation(ourShader.Program, "view");
+		projectionLoc = glGetUniformLocation(ourShader.Program, "projection");
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+		glBindVertexArray(skyboxVAO);
+		GLuint skyboxLoc = glGetUniformLocation(ourShader.Program, "skybox");
+		glUniform1i(skyboxLoc, 0);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		glBindVertexArray(0);
+		glDepthFunc(GL_LESS);
 
 		glfwSwapBuffers(window);               // 颜色双缓冲
 	}
