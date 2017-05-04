@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/LearnOpenGL/4Advanced-OpenGL/6Cubemaps/2Reflection/reflection.png)
