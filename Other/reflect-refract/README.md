@@ -1,3 +1,5 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/Other/reflect-refract/data/1.png)
+
 <a href="http://www.codecogs.com/eqnedit.php?latex=u'=&space;d\frac{v}{|v|}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?u'=&space;d\frac{v}{|v|}" title="u'= d\frac{v}{|v|}" /></a>
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=d&space;=&space;|u|cos\theta" target="_blank"><img src="http://latex.codecogs.com/gif.latex?d&space;=&space;|u|cos\theta" title="d = |u|cos\theta" /></a>
@@ -6,6 +8,8 @@
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=u'&space;=&space;\frac{u\cdot&space;v}{|v|^{2}}v" target="_blank"><img src="http://latex.codecogs.com/gif.latex?u'&space;=&space;\frac{u\cdot&space;v}{|v|^{2}}v" title="u' = \frac{u\cdot v}{|v|^{2}}v" /></a>
 
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/Other/reflect-refract/data/2.png)
+
 <a href="http://www.codecogs.com/eqnedit.php?latex=N&space;=&space;2S" target="_blank"><img src="http://latex.codecogs.com/gif.latex?N&space;=&space;2S" title="N = 2S" /></a>
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=R&space;=&space;I&space;&plus;&space;2S" target="_blank"><img src="http://latex.codecogs.com/gif.latex?R&space;=&space;I&space;&plus;&space;2S" title="R = I + 2S" /></a>
@@ -13,6 +17,8 @@
 <a href="http://www.codecogs.com/eqnedit.php?latex=S&space;=&space;-\frac{I\cdot&space;N}{|N|^{2}}N&space;=&space;-(I\cdot&space;N)N" target="_blank"><img src="http://latex.codecogs.com/gif.latex?S&space;=&space;-\frac{I\cdot&space;N}{|N|^{2}}N&space;=&space;-(I\cdot&space;N)N" title="S = -\frac{I\cdot N}{|N|^{2}}N = -(I\cdot N)N" /></a>
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=R&space;=&space;I&space;-&space;2(I\cdot&space;N)N" target="_blank"><img src="http://latex.codecogs.com/gif.latex?R&space;=&space;I&space;-&space;2(I\cdot&space;N)N" title="R = I - 2(I\cdot N)N" /></a>
+
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/Other/reflect-refract/data/3.png)
 
 [snell](https://en.wikipedia.org/wiki/Snell%27s_law)
 
