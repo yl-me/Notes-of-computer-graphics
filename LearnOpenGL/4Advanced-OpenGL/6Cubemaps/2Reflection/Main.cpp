@@ -71,8 +71,8 @@ int main()
 
 	glViewport(0, 0, WIDTH, HEIGHT);
 
-	Shader ourShader("path/default.vert", "path/default.frag");
-	Shader skyboxShader("path/cubemap.vert", "path/cubemap.frag");
+	Shader ourShader("C://Users/lenovo/Desktop/NeHe/NeHe/default.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/default.frag");
+	Shader skyboxShader("C://Users/lenovo/Desktop/NeHe/NeHe/cubemap.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/cubemap.frag");
 
 	GLfloat skyboxVertices[] = {
 		// Positions          
@@ -120,48 +120,48 @@ int main()
 	};
 
 	GLfloat cubeVertices[] = {
-		// Back face
-		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, // Bottom-left
-		0.5f,  0.5f, -0.5f,  1.0f, 1.0f, // top-right
-		0.5f, -0.5f, -0.5f,  1.0f, 0.0f, // bottom-right         
-		0.5f,  0.5f, -0.5f,  1.0f, 1.0f, // top-right
-		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f, // bottom-left
-		-0.5f,  0.5f, -0.5f,  0.0f, 1.0f, // top-left
-		// Front face
-		-0.5f, -0.5f,  0.5f,  0.0f, 0.0f, // bottom-left
-		0.5f, -0.5f,  0.5f,  1.0f, 0.0f, // bottom-right
-		0.5f,  0.5f,  0.5f,  1.0f, 1.0f, // top-right
-		0.5f,  0.5f,  0.5f,  1.0f, 1.0f, // top-right
-		-0.5f,  0.5f,  0.5f,  0.0f, 1.0f, // top-left
-		-0.5f, -0.5f,  0.5f,  0.0f, 0.0f, // bottom-left
-		// Left face
-		-0.5f,  0.5f,  0.5f,  1.0f, 0.0f, // top-right
-		-0.5f,  0.5f, -0.5f,  1.0f, 1.0f, // top-left
-		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, // bottom-left
-		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, // bottom-left
-		-0.5f, -0.5f,  0.5f,  0.0f, 0.0f, // bottom-right
-		-0.5f,  0.5f,  0.5f,  1.0f, 0.0f, // top-right
-		// Right face
-		0.5f,  0.5f,  0.5f,  1.0f, 0.0f, // top-left
-		0.5f, -0.5f, -0.5f,  0.0f, 1.0f, // bottom-right
-		0.5f,  0.5f, -0.5f,  1.0f, 1.0f, // top-right         
-		0.5f, -0.5f, -0.5f,  0.0f, 1.0f, // bottom-right
-		0.5f,  0.5f,  0.5f,  1.0f, 0.0f, // top-left
-		0.5f, -0.5f,  0.5f,  0.0f, 0.0f, // bottom-left     
-		// Bottom face
-		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, // top-right
-		0.5f, -0.5f, -0.5f,  1.0f, 1.0f, // top-left
-		0.5f, -0.5f,  0.5f,  1.0f, 0.0f, // bottom-left
-		0.5f, -0.5f,  0.5f,  1.0f, 0.0f, // bottom-left
-		-0.5f, -0.5f,  0.5f,  0.0f, 0.0f, // bottom-right
-		-0.5f, -0.5f, -0.5f,  0.0f, 1.0f, // top-right
-		// Top face
-		-0.5f,  0.5f, -0.5f,  0.0f, 1.0f, // top-left
-		0.5f,  0.5f,  0.5f,  1.0f, 0.0f, // bottom-right
-		0.5f,  0.5f, -0.5f,  1.0f, 1.0f, // top-right     
-		0.5f,  0.5f,  0.5f,  1.0f, 0.0f, // bottom-right
-		-0.5f,  0.5f, -0.5f,  0.0f, 1.0f, // top-left
-		-0.5f,  0.5f,  0.5f,  0.0f, 0.0f  // bottom-left        
+		// Positions          // Normals
+		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+
+		0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+		0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+		0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+
+		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+		0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+		0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+
+		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+		0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+		0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
 	};
 
 	GLuint cubeVBO, cubeVAO;
@@ -171,10 +171,10 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);     // 把VBO绑定到GL_ARRAY_BUFFER
 	glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), &cubeVertices, GL_STATIC_DRAW); // 把顶点数据复制到缓冲的内存中
 	// 顶点坐标
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GL_FLOAT), (GLvoid *)0);   // 解析顶点数据
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GL_FLOAT), (GLvoid *)0);   // 解析顶点数据
 	glEnableVertexAttribArray(0);           // 启用顶点位置属性
 	// 纹理坐标
-	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GL_FLOAT), (GLvoid *)(3 * sizeof(float)));   // 解析顶点数据
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GL_FLOAT), (GLvoid *)(3 * sizeof(float)));   // 解析顶点数据
 	glEnableVertexAttribArray(1);           // 启用顶点位置属性
 	glBindBuffer(GL_ARRAY_BUFFER, 0);  // 可以安全解绑，对于glVertexAttribPointer绑定的VBO对象
 	glBindVertexArray(0);  // 解绑VAO
@@ -191,15 +191,17 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, 0);  // 可以安全解绑，对于glVertexAttribPointer绑定的VBO对象
 	glBindVertexArray(0);  // 解绑VAO
 
-	GLuint cubeTexture = loadTexture("path/container.jpg");
 	std::vector<const char *> texture_face;
-	texture_face.push_back("path/skybox/right.jpg");
-	texture_face.push_back("path/skybox/left.jpg");
-	texture_face.push_back("path/skybox/top.jpg");
-	texture_face.push_back("path/skybox/bottom.jpg");
-	texture_face.push_back("path/skybox/back.jpg");
-	texture_face.push_back("path/skybox/front.jpg");
+	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/right.jpg");
+	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/left.jpg");
+	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/top.jpg");
+	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/bottom.jpg");
+	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/back.jpg");
+	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/front.jpg");
 	GLuint cubemapTexture = loadCubemapTexture(texture_face);
+
+
+	Model mModel("C://Users/lenovo/Desktop/NeHe/NeHe/nanosuit/nanosuit.obj");
 
 	glEnable(GL_DEPTH_TEST);          //深度测试
 	glDepthFunc(GL_LESS);
@@ -225,13 +227,16 @@ int main()
 		GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
 		GLuint viewLoc = glGetUniformLocation(ourShader.Program, "view");
 		GLuint projectionLoc = glGetUniformLocation(ourShader.Program, "projection");
+		GLuint cameraPosLoc = glGetUniformLocation(ourShader.Program, "cameraPos");
+		glUniform3f(cameraPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
 		// cubes
 		glBindVertexArray(cubeVAO);
-		glBindTexture(GL_TEXTURE_2D, cubeTexture);
+//		glBindTexture(GL_TEXTURE_2D, cubeTexture);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
 		model = glm::translate(model, glm::vec3(-1.0f, 0.0f, -1.0f));
 		modelLoc = glGetUniformLocation(ourShader.Program, "model");
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -242,17 +247,19 @@ int main()
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		glBindVertexArray(0);
 
+		mModel.Draw(ourShader);
+
 		// skybox
 		glDepthFunc(GL_LEQUAL);
 		skyboxShader.Use();
 		view = glm::mat4(glm::mat3(camera.GetViewMatrix()));
 		projection = glm::perspective(camera.Zoom, (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
-		viewLoc = glGetUniformLocation(ourShader.Program, "view");
-		projectionLoc = glGetUniformLocation(ourShader.Program, "projection");
+		viewLoc = glGetUniformLocation(skyboxShader.Program, "view");
+		projectionLoc = glGetUniformLocation(skyboxShader.Program, "projection");
 		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glBindVertexArray(skyboxVAO);
-		GLuint skyboxLoc = glGetUniformLocation(ourShader.Program, "skybox");
+		GLuint skyboxLoc = glGetUniformLocation(skyboxShader.Program, "skybox");
 		glUniform1i(skyboxLoc, 0);
 		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
