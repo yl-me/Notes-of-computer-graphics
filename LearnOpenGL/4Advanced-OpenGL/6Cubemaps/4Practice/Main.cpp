@@ -71,8 +71,8 @@ int main()
 
 	glViewport(0, 0, WIDTH, HEIGHT);
 
-	Shader ourShader("C://Users/lenovo/Desktop/NeHe/NeHe/default.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/default.frag");
-	Shader skyboxShader("C://Users/lenovo/Desktop/NeHe/NeHe/cubemap.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/cubemap.frag");
+	Shader ourShader("path/default.vert", "path/default.frag");
+	Shader skyboxShader("path/cubemap.vert", "path/cubemap.frag");
 
 	GLfloat skyboxVertices[] = {
 		// Positions          
@@ -192,16 +192,16 @@ int main()
 	glBindVertexArray(0);  // Ω‚∞ÛVAO
 
 	std::vector<const char *> texture_face;
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/right.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/left.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/top.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/bottom.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/back.jpg");
-	texture_face.push_back("C://Users/lenovo/Desktop/NeHe/NeHe/skybox/front.jpg");
+	texture_face.push_back("path/skybox/right.jpg");
+	texture_face.push_back("path/skybox/left.jpg");
+	texture_face.push_back("path/skybox/top.jpg");
+	texture_face.push_back("path/skybox/bottom.jpg");
+	texture_face.push_back("path/skybox/back.jpg");
+	texture_face.push_back("path/skybox/front.jpg");
 	GLuint cubemapTexture = loadCubemapTexture(texture_face);
 
 
-	Model mModel("C://Users/lenovo/Desktop/NeHe/NeHe/nanosuit/nanosuit.obj");
+	Model mModel("path/nanosuit/nanosuit.obj");
 
 	glEnable(GL_DEPTH_TEST);          //…Ó∂»≤‚ ‘
 	glDepthFunc(GL_LESS);
