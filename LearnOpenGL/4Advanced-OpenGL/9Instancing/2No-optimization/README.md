@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/LearnOpenGL/4Advanced-OpenGL/9Instancing/2No-optimization/Not%20optimized.png)
