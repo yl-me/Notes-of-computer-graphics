@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/LearnOpenGL/4Advanced-OpenGL/10Anti-Aliasing/3Post-processing/post-processing.png)
