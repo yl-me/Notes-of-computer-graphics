@@ -132,8 +132,8 @@ int main()
 		1.0f,  1.0f,  1.0f, 1.0f
 	};
 
-	Shader shader("C://Users/lenovo/Desktop/NeHe/NeHe/base.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/base.frag");
-	Shader screenShader("C://Users/lenovo/Desktop/NeHe/NeHe/postProcessing.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/postProcessing.frag");
+	Shader shader("path/base.vert", "path/base.frag");
+	Shader screenShader("path/postProcessing.vert", "path/postProcessing.frag");
 
 	GLuint VAO, VBO;
 	glGenVertexArrays(1, &VAO);

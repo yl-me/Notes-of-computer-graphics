@@ -121,7 +121,7 @@ int main()
 		-0.5f,  0.5f, -0.5f
 	};
 
-	Shader shader("C://Users/lenovo/Desktop/NeHe/NeHe/base.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/base.frag");
+	Shader shader("path/base.vert", "path/base.frag");
 	
 	GLuint VAO, VBO;
 	glGenVertexArrays(1, &VAO);
