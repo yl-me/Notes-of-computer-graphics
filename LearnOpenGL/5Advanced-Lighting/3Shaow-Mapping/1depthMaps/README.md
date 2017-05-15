@@ -1,0 +1,1 @@
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/LearnOpenGL/5Advanced-Lighting/3Shaow-Mapping/1depthMaps/depthMap.png)
