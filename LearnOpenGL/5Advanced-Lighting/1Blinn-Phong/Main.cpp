@@ -106,7 +106,7 @@ int main()
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (GLvoid*)(6 * sizeof(GLfloat)));
 	glBindVertexArray(0);
 
-	GLuint floorTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/wood.png");
+	GLuint floorTexture = loadTexture("path/wood.png");
 
 	while (!glfwWindowShouldClose(window)) {   // 检查GLFW是否被要求退出
 		glfwPollEvents();                      // 检查是否触发事件，来调用回调函数

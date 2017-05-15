@@ -91,7 +91,7 @@ int main()
 		8.0f, -0.5f, -8.0f,  0.0f, 1.0f, 0.0f,  5.0f, 5.0f
 	};
 
-	Shader shader("C://Users/lenovo/Desktop/NeHe/NeHe/base.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/base.frag");
+	Shader shader("path/base.vert", "path/base.frag");
 
 	GLuint planeVAO, planeVBO;
 	glGenVertexArrays(1, &planeVAO);
@@ -120,8 +120,8 @@ int main()
 		glm::vec3(1.00)
 	};
 
-	GLuint floorTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/wood.png", false, false);
-	GLuint floorTextureGammaCorrected = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/wood.png", false, true);
+	GLuint floorTexture = loadTexture("path/wood.png", false, false);
+	GLuint floorTextureGammaCorrected = loadTexture("path/wood.png", false, true);
 
 	while (!glfwWindowShouldClose(window)) {   // 检查GLFW是否被要求退出
 		glfwPollEvents();                      // 检查是否触发事件，来调用回调函数
