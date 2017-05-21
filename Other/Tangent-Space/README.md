@@ -1,5 +1,9 @@
 切线空间(tangent sapce)
 
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/Other/Tangent-Space/normal_mapping_tbn_vectors.png)
+
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/Other/Tangent-Space/normal_mapping_surface_edges.png)
+
 the tangent vector <a href="http://www.codecogs.com/eqnedit.php?latex=T" target="_blank"><img src="http://latex.codecogs.com/gif.latex?T" title="T" /></a> and bitangent vector <a href="http://www.codecogs.com/eqnedit.php?latex=B" target="_blank"><img src="http://latex.codecogs.com/gif.latex?B" title="B" /></a> are unit vector
 
 <a href="http://www.codecogs.com/eqnedit.php?latex=E_{1}=\Delta&space;U_{1}T&plus;\Delta&space;V_{1}B" target="_blank"><img src="http://latex.codecogs.com/gif.latex?E_{1}=\Delta&space;U_{1}T&plus;\Delta&space;V_{1}B" title="E_{1}=\Delta U_{1}T+\Delta V_{1}B" /></a>
