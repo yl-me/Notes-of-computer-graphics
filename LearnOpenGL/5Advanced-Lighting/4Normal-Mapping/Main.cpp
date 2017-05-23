@@ -78,14 +78,14 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	Shader shader("C://Users/lenovo/Desktop/NeHe/NeHe/normalMapping.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/normalMapping.frag");
+	Shader shader("path/normalMapping.vert", "path/normalMapping.frag");
 	
 	shader.Use();
 	glUniform1i(glGetUniformLocation(shader.Program, "diffuseTexture"), 0);
 	glUniform1i(glGetUniformLocation(shader.Program, "normalTexture"), 1);
 
-	GLuint diffuseTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/brickwall.jpg", false, false);
-	GLuint normalTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/brickwall_normal.jpg", false, false);
+	GLuint diffuseTexture = loadTexture("path/brickwall.jpg", false, false);
+	GLuint normalTexture = loadTexture("path/brickwall_normal.jpg", false, false);
 
 	while (!glfwWindowShouldClose(window)) {   // 检查GLFW是否被要求退出
 		glfwPollEvents();                      // 检查是否触发事件，来调用回调函数
