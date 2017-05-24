@@ -1,1 +1,1 @@
-![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson48.48.ArcBall%20Rotation/Screenshot.png)
+![image](https://github.com/yl-me/Notes-of-computer-graphics/blob/master/NeHe/Lesson48.ArcBall%20Rotation/Screenshot.png)
