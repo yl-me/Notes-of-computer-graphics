@@ -18,26 +18,26 @@
 
 const GLuint WIDTH = 800, HEIGHT = 600;
 
-GLfloat deltaTime = 0.0f;       // Ã¿Ö¡ËùÓÃÊ±¼ä
-GLfloat lastFrame = 0.0f;       // ÏÂÒ»Ö¡µÄÊ±¼ä
+GLfloat deltaTime = 0.0f;       // æ¯å¸§æ‰€ç”¨æ—¶é—´
+GLfloat lastFrame = 0.0f;       // ä¸‹ä¸€å¸§çš„æ—¶é—´
 
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 
 glm::vec3 lightPos(0.5f, 1.0f, 0.3f);
 
-GLfloat lastX = 400;        // ÆÁÄ»µÄÖĞĞÄÎ»ÖÃ
+GLfloat lastX = 400;        // å±å¹•çš„ä¸­å¿ƒä½ç½®
 GLfloat lastY = 300;
 
-GLboolean firstMouse = true;   // µÚÒ»´ÎÊó±êÎ»ÖÃÊÇ·ñÕıÈ·
+GLboolean firstMouse = true;   // ç¬¬ä¸€æ¬¡é¼ æ ‡ä½ç½®æ˜¯å¦æ­£ç¡®
 GLboolean hdr = true;
 
 GLfloat exposure = 1.0f;
 
 bool keys[1024];
 
-void key_callback(GLFWwindow * window, int key, int scancode, int action, int mode);  // ¼üÅÌ
-void mouse_callback(GLFWwindow * window, double xpos, double ypos);           // Êó±ê
-void scroll_callback(GLFWwindow * window, double xoffset, double yoffset);    // »¬ÂÖ
+void key_callback(GLFWwindow * window, int key, int scancode, int action, int mode);  // é”®ç›˜
+void mouse_callback(GLFWwindow * window, double xpos, double ypos);           // é¼ æ ‡
+void scroll_callback(GLFWwindow * window, double xoffset, double yoffset);    // æ»‘è½®
 void do_movement();
 
 GLuint loadTexture(const GLchar * path, GLboolean alpha = false);
@@ -50,10 +50,10 @@ GLuint planeVAO;
 int main()
 {
 	glfwInit();
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);      // openglÖ÷°æ±¾ºÅ
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);      // opengl¸±°æ±¾ºÅ
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);     // ÉèÖÃÎªºËĞÄÄ£Ê½
-	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);           // ²»ÄÜµ÷Õû´°¿Ú´óĞ¡
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);      // openglä¸»ç‰ˆæœ¬å·
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);      // openglå‰¯ç‰ˆæœ¬å·
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);     // è®¾ç½®ä¸ºæ ¸å¿ƒæ¨¡å¼
+	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);           // ä¸èƒ½è°ƒæ•´çª—å£å¤§å°
 	glfwWindowHint(GLFW_SAMPLES, 4);
 
 	GLFWwindow * window = glfwCreateWindow(800, 600, "OpenGL", nullptr, nullptr);
@@ -64,15 +64,15 @@ int main()
 	}
 	glfwMakeContextCurrent(window);
 
-	glfwSetKeyCallback(window, key_callback);     // ¼üÅÌ»Øµ÷º¯Êı
+	glfwSetKeyCallback(window, key_callback);     // é”®ç›˜å›è°ƒå‡½æ•°
 
-	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);    // Êó±êÄ£Ê½
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);    // é¼ æ ‡æ¨¡å¼
 
-	glfwSetCursorPosCallback(window, mouse_callback);    // Êó±ê»Øµ÷º¯Êı
+	glfwSetCursorPosCallback(window, mouse_callback);    // é¼ æ ‡å›è°ƒå‡½æ•°
 
-	glfwSetScrollCallback(window, scroll_callback);      // ¹öÂÖ»Øµ÷º¯Êı
+	glfwSetScrollCallback(window, scroll_callback);      // æ»šè½®å›è°ƒå‡½æ•°
 
-	glewExperimental = GL_TRUE;          // ÉèÖÃÎªGL_TRUEÊÇÎªÁË¸üºÃµÄÊ¹ÓÃºËĞÄÄ£Ê½
+	glewExperimental = GL_TRUE;          // è®¾ç½®ä¸ºGL_TRUEæ˜¯ä¸ºäº†æ›´å¥½çš„ä½¿ç”¨æ ¸å¿ƒæ¨¡å¼
 	if (glewInit() != GLEW_OK) {
 		std::cout << "Failed to initialize GLEW" << std::endl;
 		return -1;
@@ -82,10 +82,10 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	Shader shader("C://Users/lenovo/Desktop/NeHe/NeHe/lighting.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/lighting.frag");
-	Shader hdrShader("C://Users/lenovo/Desktop/NeHe/NeHe/hdr.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/hdr.frag");
+	Shader shader("path/lighting.vert", "path/lighting.frag");
+	Shader hdrShader("path/hdr.vert", "path/hdr.frag");
 
-	GLuint woodTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/wood.png");
+	GLuint woodTexture = loadTexture("path/wood.png");
 
 	std::vector<glm::vec3> lightColors;
 	lightColors.push_back(glm::vec3(200.0f, 200.0f, 200.0f));
@@ -121,12 +121,12 @@ int main()
 
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 
-	while (!glfwWindowShouldClose(window)) {   // ¼ì²éGLFWÊÇ·ñ±»ÒªÇóÍË³ö
-		glfwPollEvents();                      // ¼ì²éÊÇ·ñ´¥·¢ÊÂ¼ş£¬À´µ÷ÓÃ»Øµ÷º¯Êı
+	while (!glfwWindowShouldClose(window)) {   // æ£€æŸ¥GLFWæ˜¯å¦è¢«è¦æ±‚é€€å‡º
+		glfwPollEvents();                      // æ£€æŸ¥æ˜¯å¦è§¦å‘äº‹ä»¶ï¼Œæ¥è°ƒç”¨å›è°ƒå‡½æ•°
 		do_movement();
 
-		GLfloat currentFrame = glfwGetTime();    // µ±Ç°Ö¡µÄÊ±¼ä
-		deltaTime = currentFrame - lastFrame;    // Ã¿Ö¡ËùÓÃÊ±¼ä
+		GLfloat currentFrame = glfwGetTime();    // å½“å‰å¸§çš„æ—¶é—´
+		deltaTime = currentFrame - lastFrame;    // æ¯å¸§æ‰€ç”¨æ—¶é—´
 		lastFrame = currentFrame;
 
 //		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -164,7 +164,7 @@ int main()
 
 		std::cout << "exposure: " << exposure << std::endl;
 
-		glfwSwapBuffers(window);               // ÑÕÉ«Ë«»º³å
+		glfwSwapBuffers(window);               // é¢œè‰²åŒç¼“å†²
 	}
 	glfwTerminate();
 	return 0;
@@ -280,7 +280,7 @@ GLuint loadTexture(const GLchar * path, GLboolean alpha)
 	unsigned char * image = SOIL_load_image(path, &width, &height, 0, alpha ? SOIL_LOAD_RGBA : SOIL_LOAD_RGB);
 
 	glBindTexture(GL_TEXTURE_2D, textureID);
-	// µ÷ÕûsRGBÎªÏßĞÔ¿Õ¼ä£¬²»È»»á¶Ôgammaµ÷ÕûÁ½´Î
+	// è°ƒæ•´sRGBä¸ºçº¿æ€§ç©ºé—´ï¼Œä¸ç„¶ä¼šå¯¹gammaè°ƒæ•´ä¸¤æ¬¡
 	glTexImage2D(GL_TEXTURE_2D, 0, alpha ? GL_SRGB : GL_SRGB_ALPHA, width, height, 0, alpha ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, image);
 	glGenerateMipmap(GL_TEXTURE_2D);
 
