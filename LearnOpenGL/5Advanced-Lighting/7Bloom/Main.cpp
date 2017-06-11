@@ -84,13 +84,13 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	Shader shader("C://Users/lenovo/Desktop/NeHe/NeHe/bloom.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/bloom.frag");
-	Shader shaderBlur("C://Users/lenovo/Desktop/NeHe/NeHe/blur.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/blur.frag");
-	Shader shaderLight("C://Users/lenovo/Desktop/NeHe/NeHe/bloom.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/light_box.frag");
-	Shader shaderBloomFinal("C://Users/lenovo/Desktop/NeHe/NeHe/bloomFinal.vert", "C://Users/lenovo/Desktop/NeHe/NeHe/bloomFinal.frag");
+	Shader shader("path/bloom.vert", "path/bloom.frag");
+	Shader shaderBlur("path/blur.vert", "path/blur.frag");
+	Shader shaderLight("path/bloom.vert", "path/light_box.frag");
+	Shader shaderBloomFinal("path/bloomFinal.vert", "path/bloomFinal.frag");
 	
-	GLuint woodTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/wood.png");
-	GLuint containerTexture = loadTexture("C://Users/lenovo/Desktop/NeHe/NeHe/container2.png");
+	GLuint woodTexture = loadTexture("path/wood.png");
+	GLuint containerTexture = loadTexture("path/container2.png");
 
 	GLuint hdrFBO;
 	glGenFramebuffers(1, &hdrFBO);
