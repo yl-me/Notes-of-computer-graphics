@@ -1,4 +1,4 @@
-###Calculating a light's radius
+### Calculating a light's radius
 
 attenuation functions:
 
