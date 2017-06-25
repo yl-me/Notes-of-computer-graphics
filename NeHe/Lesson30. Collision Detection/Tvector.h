@@ -60,7 +60,7 @@ public:
 
     // Dot or scalar product
     double dot(const TVector& v) const {
-        return ((isValid() && isValid()) ? (X() * v.X() + Y() * v.Y() + Z() * v.Z()) : 0.0);
+        return ((isValid() && v.isValid()) ? (X() * v.X() + Y() * v.Y() + Z() * v.Z()) : 0.0);
     }
     static double dot(const TVector& v1, const TVector& v2) { return v1.dot(v2); }
 
