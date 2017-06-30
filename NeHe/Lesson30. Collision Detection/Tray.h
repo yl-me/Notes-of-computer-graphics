@@ -38,7 +38,7 @@ public:
     // Selectors
     TVector P() const { return _P; }
     TVector V() const { return _V; }
-    int isValid() const { return V().isUnit() && P().isValid(); }
+    int isValid() const { return V().isValid() && P().isValid(); }
 
     // Distance
     double dist(const TRay& ray) const;
